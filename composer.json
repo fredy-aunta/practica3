@@ -1,0 +1,9 @@
+{
+    "config": {
+        "vendor-dir": "app/vendor"
+    },
+    "require": {
+        "facebook/webdriver": "dev-master",
+        "facebook/php-sdk-v4": "^5.1"
+    }
+}
