@@ -20,6 +20,9 @@
                     <? endif ?>
                 </ul>
             </div>
+            <div class="col-md-6">
+                <h1><a href="/" class="logo"><img src="/assets/images/logo.png"></a></h1>
+            </div>
         </div>
     </div>
 </nav>

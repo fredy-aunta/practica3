@@ -199,3 +199,14 @@ h4.offer-name{
 .pad03-04{
     padding: 3% 4% 3% 4%;
 }
+.smaller{
+    font-size: 0.8em;
+}
+a.border-less-sides.list-group-item{
+    border-left: none;
+    border-right: none;
+}
+a.logo{
+    text-align: right;
+    color: yellowgreen;
+}

@@ -8,9 +8,9 @@
 <?$this->load->view('boxes/header')?>
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 list-group">
             <?foreach($categorias as $categoria):?>
-                <button class="btn btn-block btn-default hide-text-overflow"><?= $categoria->name?></button>
+                <a class="list-group-item hide-text-overflow border-less-sides"><?= $categoria->name?></a>
             <?endforeach?>
         </div>
         <div class="col-md-10">
