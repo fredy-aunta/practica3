@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-2 list-group">
             <?foreach($categorias as $categoria):?>
-                <a class="list-group-item hide-text-overflow border-less-sides"><?= $categoria->name?></a>
+                <a class="list-group-item hide-text-overflow border-less-sides" href="#"><?= $categoria->name?></a>
             <?endforeach?>
         </div>
         <div class="col-md-10">
@@ -52,7 +52,7 @@
                                             <span class="strikethrough">$<?= $oferta->precio_anterior?></span>
                                             <span class="">$<?= $oferta->precio?></span>
                                         </p>
-                                        <a class="btn btn-primary" href="/ofertas/details/<?= $oferta->id?>">View Details</a>
+                                        <a class="btn btn-primary btn-block" href="/ofertas/details/<?= $oferta->id?>">View Details</a>
                                     </div>
                                 </div>
                             </div>

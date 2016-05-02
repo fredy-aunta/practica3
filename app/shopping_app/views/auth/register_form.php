@@ -12,10 +12,10 @@
         <div class="marg2 pad03-04 background-green">
             <form class="" action="<?= site_url('/auth/login_fb')?>">
                 <div class="form-group">
-                    <a class="btn btn-block btn-social btn-lg btn-facebook">
+                    <button type="submit" class="btn btn-block btn-social btn-lg btn-facebook">
                         <i class="fa fa-facebook"></i>
                         Register with Facebook
-                    </a>
+                    </button>
                 </div>
             </form>
             <p class="smaller">

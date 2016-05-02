@@ -22,7 +22,7 @@ class Ofertas_dao extends CI_Model
         $this->db->where_in('ofertas.categoria_id', $categories_ids);
         $this->db->order_by('rand()');
         $this->db->limit(10);
-        $query = $this->db->get('ofertas');
+        $query = $this->db->get(self::TABLE_NAME);
 
         return $query->result();
     }
@@ -32,5 +32,15 @@ class Ofertas_dao extends CI_Model
         $this->db->insert(self::TABLE_NAME, $offer);
 
         return $this->db->insert_id();
+    }
+
+    public function get_by_id($offer_id)
+    {
+        $this->db->where('id', $offer_id);
+        $query = $this->db->get(self::TABLE_NAME);
+        if($query->num_rows() == 0){
+            return false;
+        }
+        return $query->row();
     }
 }

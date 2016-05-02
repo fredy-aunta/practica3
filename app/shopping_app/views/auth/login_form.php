@@ -13,10 +13,10 @@
             <div class="marg2 pad03-04 background-green">
                 <form action="<?= site_url('/auth/login_fb') ?>">
                     <div class="form-group">
-                        <a class="btn btn-block btn-social btn-lg btn-facebook">
+                        <button type="submit" class="btn btn-block btn-social btn-lg btn-facebook">
                             <i class="fa fa-facebook"></i>
                             Log in with Facebook
-                        </a>
+                        </button>
                     </div>
                 </form>
                 <h4 class="center">OR</h4>

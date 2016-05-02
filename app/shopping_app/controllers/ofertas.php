@@ -11,14 +11,23 @@ class Ofertas extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model(['ofertas_dao']);
     }
     public function categoria($categoria_id)
     {
         echo $categoria_id;
     }
 
-    public function details($oferta_id)
+    public function details($oferta_id = null)
     {
-        var_dump($oferta_id);
+        if(empty($oferta_id)){
+            redirect('/');
+        }
+        $offer = $this->ofertas_dao->get_by_id($oferta_id);
+        if(empty($offer)){
+            redirect('/');
+        }
+        $this->data['offer'] = $offer;
+        $this->load->view('offer_details', $this->data);
     }
 }
