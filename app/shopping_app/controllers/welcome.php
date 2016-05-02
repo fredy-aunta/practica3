@@ -8,7 +8,7 @@ class Welcome extends MY_Controller {
         $this->load->model(['categoria_dao']);
         $this->load->library(array('offers_query_service'));
     }
-	public function index()
+	public function test()
 	{
 		$this->_check_like_list();
 		if($this->tank_auth->is_logged_in()){
@@ -18,7 +18,7 @@ class Welcome extends MY_Controller {
         $this->data['ofertas'] = $ofertas;
 		$this->load->view('index', $this->data);
 	}
-	public function test()
+	public function index()
     {
         $ofertas = $this->offers_query_service->get_offers_to_index();
         $categorias = $this->categoria_dao->get_categories();

@@ -187,3 +187,15 @@ body{
 h4.offer-name{
   width: 200px;
 }
+.center{
+    text-align: center;
+}
+.marg02{
+    margin: 2%;
+}
+.background-green{
+    background: rgba(164, 193, 52, 0.48);
+}
+.pad03-04{
+    padding: 3% 4% 3% 4%;
+}

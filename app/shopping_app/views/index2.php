@@ -2,7 +2,7 @@
 <html>
 <head>
     <?$this->load->view('common/head')?>
-    <title>Shopping-app - Home1</title>
+    <title>Shopping-app - Home</title>
 </head>
 <body>
 <?$this->load->view('boxes/header')?>
