@@ -171,6 +171,8 @@ class Auth extends CI_Controller
 						}
 						
 						unset($data['password']); // Clear password (just for any case)
+                        var_dump($data);
+						$this->cliente_dao->create($data['user_id'],$this->form_validation->set_value('username'),'', $data['email']);
 						redirect('');
 //						$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
 					}

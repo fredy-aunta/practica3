@@ -190,6 +190,9 @@ h4.offer-name{
 .center{
     text-align: center;
 }
+.right{
+    text-align: right;
+}
 .marg02{
     margin: 2%;
 }
