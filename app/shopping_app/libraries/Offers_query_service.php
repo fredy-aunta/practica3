@@ -32,4 +32,16 @@ class Offers_query_service
 
         return $ofertas;
     }
+
+    public function get_offers_by_mall($mall_id)
+    {
+        if($this->CI->tank_auth->is_logged_in()){
+            $user_id = $this->CI->tank_auth->get_user_id();
+            $cliente = $this->CI->cliente_dao->get_by_user_id($user_id);
+            $offers = $this->CI->ofertas_dao->get_offers_by_mall_id($mall_id, $cliente->id);
+        }else{
+            $offers = $this->CI->ofertas_dao->get_offers_by_mall_id($mall_id);
+        }
+        return $offers;
+    }
 }

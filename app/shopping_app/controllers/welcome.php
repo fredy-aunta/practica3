@@ -5,7 +5,7 @@ class Welcome extends MY_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(['categoria_dao']);
+        $this->load->model(['categoria_dao','centro_comercial_dao']);
         $this->load->library(array('offers_query_service'));
     }
 	public function test()
@@ -22,8 +22,10 @@ class Welcome extends MY_Controller {
     {
         $ofertas = $this->offers_query_service->get_offers_to_index();
         $categorias = $this->categoria_dao->get_categories();
+        $malls = $this->centro_comercial_dao->get_all_malls();
         $this->data['ofertas'] = $ofertas;
         $this->data['categorias'] = $categorias;
+        $this->data['malls'] = $malls;
         $this->load->view('index2', $this->data);
     }
 }

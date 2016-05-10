@@ -43,4 +43,15 @@ class Ofertas_dao extends CI_Model
         }
         return $query->row();
     }
+
+    public function get_offers_by_mall_id($mall_id, $customer_id=null)
+    {
+        if(!empty($customer_id)){
+            $this->db->join('cliente_categoria cc','cc.categoria_id = o.categoia_id AND cc.cliente_id = ' . $customer_id);
+        }
+        $this->db->join('ofertas o', 'o.id = cca.oferta_id');
+        $this->db->where('cca.centro_comercial_id', $mall_id);
+        $query = $this->db->get('centro_comercial_oferta cca');
+        return $query->result();
+    }
 }
